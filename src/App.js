@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout/Layout"
 import Main from "./routes/Main"
 import Cart from "./routes/Сart"
+  
 
 function App() {
   return (

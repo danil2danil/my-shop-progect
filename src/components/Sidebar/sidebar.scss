@@ -1,5 +1,57 @@
-.sidebar{
-    width: 300px;
+@import '../../style-vars/fonts.scss';
+
+.sidebar {
+    @extend %sidebar-font;
+    width: 311px;
     height: 100%;
-    background: grey;
+    padding: 40px 17px;
+    display: flex;
+    flex-direction: column;
+    background: $nav-bg;
+
+    &__menu-btn {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    &__logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__logo-text {
+        font-size: 34px;
+        color: white;
+    }
+
+    &__nav-item {
+        display: flex;
+        flex-basis: 100%;
+        padding: 16px;
+        border-radius: 8px;
+        background: $hover-block;
+        :hover{
+            background: red;
+        }
+    }
+
+    &__nav-ico {
+        margin-right: 16px;
+        color: white;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__nav-title {
+        color: $nav-text-color;
+        font-size: 16px;
+    }
 }
