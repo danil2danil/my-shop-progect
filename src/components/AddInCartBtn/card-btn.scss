@@ -1,0 +1,10 @@
+.card__btn {
+    padding: 20px;
+    background: rgb(185, 111, 255);
+    cursor: pointer;
+    color: white;
+    
+    &:hover {
+        background: rgb(168, 76, 253);
+    }
+}
