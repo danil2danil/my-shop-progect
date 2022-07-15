@@ -4,10 +4,23 @@
     @extend %sidebar-font;
     width: 311px;
     height: 100%;
-    padding: 40px 17px;
+    padding: 40px 0px;
     display: flex;
     flex-direction: column;
     background: $nav-bg;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    &.mini{
+        width: 88px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header{
+        margin: 0px 24px;
+    }
 
     &__menu-btn {
         width: 40px;
@@ -32,26 +45,37 @@
         color: white;
     }
 
-    &__nav-item {
-        display: flex;
-        flex-basis: 100%;
-        padding: 16px;
-        border-radius: 8px;
-        background: $hover-block;
-        :hover{
-            background: red;
-        }
+    &__nav{
+        margin: 30px 16px;
     }
 
     &__nav-ico {
-        margin-right: 16px;
-        color: white;
         width: 20px;
         height: 20px;
+        color: white;
     }
 
     &__nav-title {
-        color: $nav-text-color;
         font-size: 16px;
+        padding-left: 16px;
     }
+
+    &__nav-link {
+        display: flex;
+        flex-basis: 100%;
+        border-radius: 8px;
+        color: $nav-text-color;
+        cursor: pointer ;
+        padding: 16px;
+        &:hover{
+            background: $hover-block;
+            color: $hover-text;
+        }
+    }
+
+    &__nav-link.active{
+        background: $hover-block;
+        color: $hover-text;
+    } 
 }
+
