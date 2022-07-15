@@ -1,3 +1,5 @@
+@import './style-vars/fonts.scss';
+
 html{
   box-sizing: border-box;
 }
@@ -41,4 +43,8 @@ li{
   margin-left: 88px;
   background: rgb(240, 240, 240);
   min-height: 100vh;
+}
+
+body{
+  @extend %default-font;
 }

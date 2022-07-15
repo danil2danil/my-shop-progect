@@ -16,7 +16,7 @@ function CardBtn({product}) {
         className="card__btn"
         onClick={handleClick}
     >
-        Добавить в корзину
+        добавить в корзину
     </button>
     )
 }

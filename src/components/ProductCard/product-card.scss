@@ -1,0 +1,27 @@
+@import '../../style-vars/fonts.scss';
+
+.card {
+    padding: 20px;
+    flex-basis: 430px;
+    min-width: 300px;
+    margin: 30px;
+    background: $card-background;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+
+    &__inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        width: 230px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+
+}
