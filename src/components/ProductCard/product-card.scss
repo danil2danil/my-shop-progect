@@ -2,9 +2,6 @@
 
 .card {
     padding: 20px;
-    flex-basis: 430px;
-    min-width: 300px;
-    margin: 30px;
     background: $card-background;
     border-radius: 8px;
     display: flex;
@@ -23,5 +20,22 @@
         object-fit: cover;
     }
 
+    &__art{
+        font-size: 16px;
+        color: rgb(220, 220, 220);
+    }
 
+    &__sizes{
+        margin-bottom: 25px;
+        display: flex;
+        &-item{
+            cursor: pointer;
+            background: rgb(224, 224, 224);
+            margin-right: 15px;
+            padding: 10px;
+        }
+        &-item.chosed{
+            background: orange;
+        }
+    }
 }

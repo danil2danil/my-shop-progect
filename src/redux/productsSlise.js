@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import { getAll } from '../data/dataServis';
 
 
+
 const initialState={
     products: [],
     cart: [],
@@ -15,7 +16,7 @@ const productSlise = createSlice({
             state.products = getAll();
         },
         addItemImCart: (state, action)=>{
-            state.cart.push(action.payload)
+            state.cart = state.cart.concat(action.payload)
         }
     }
 })
