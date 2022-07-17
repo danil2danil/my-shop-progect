@@ -3,12 +3,12 @@ import {useDispatch} from 'react-redux'
 import { addItemImCart } from '../../redux/productsSlise'
 import './card-btn.scss'
 
-function CardBtn({product}) {
+function CardBtn({sizeValue, product}) {
 
     const dispatch = useDispatch();
 
     const handleClick = ()=>{
-        dispatch(addItemImCart(product))
+        dispatch(addItemImCart({product, sizeValue}));
     }
 
     return (

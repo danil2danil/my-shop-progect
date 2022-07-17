@@ -3,7 +3,7 @@ import { getAll } from '../data/dataServis';
 
 
 
-const initialState={
+const initialState = {
     products: [],
     cart: [],
 }
@@ -15,12 +15,22 @@ const productSlise = createSlice({
         getData: (state) => {
             state.products = getAll();
         },
-        addItemImCart: (state, action)=>{
-            state.cart = state.cart.concat(action.payload)
-        }
+        addItemImCart: (state, action) => {
+            state.cart.push(action.payload)
+        },
+        filterItemsName: (state, action) => {
+           
+        },
+        filterItemsType: (state, action)=>{
+
+        },
+        filterItemsSize: (state, action)=>{
+
+        },
+              
     }
 })
 
 
-export const {getData, addItemImCart} = productSlise.actions
+export const { getData, addItemImCart } = productSlise.actions
 export default productSlise.reducer
