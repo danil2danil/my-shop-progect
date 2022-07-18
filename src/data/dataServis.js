@@ -1,4 +1,4 @@
-import { closes } from "./closes";
+import { closes } from "./data";
 
 export const getAll = ()=>{
     return closes;

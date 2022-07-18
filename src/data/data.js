@@ -6,6 +6,7 @@ export const closes = [
         prise: 8500,
         sizes: [26.5, 27, 28, 28.5],
         type: "Shoes",
+        brand: 'Nike',
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ export const closes = [
         prise: 9500,
         sizes: [26.5, 27, 28, 28.5],
         type: "Shoes",
+        brand: 'Nike',
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ export const closes = [
         title: "Nike Next%tempo",
         prise: 10000,
         type: "Shoes",
-        sizes: [26.5, 27, 28, 28.5]
+        sizes: [26.5, 27, 28, 28.5],
+        brand: 'Nike'
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ export const closes = [
         title: "Nike Vomero 16",
         prise: 8000,
         type: "Shoes",
-        sizes: [26.5, 27, 28, 28.5]
+        sizes: [26.5, 27, 28, 28.5],
+        brand: 'Nike',
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ export const closes = [
         title: "Nike Zoom Pegasus 36",
         prise: 7950,
         type: "Shoes",
-        sizes: [26.5, 26]
+        sizes: [26.5, 26],
+        brand: 'Nike',
     },
     {
         id: 6,
@@ -45,7 +50,8 @@ export const closes = [
         title: "Nike Vomero 15",
         prise: 7500,
         type: "Shoes",
-        sizes: [26.5, 27, 28, 28.5]
+        sizes: [26.5, 27, 28, 28.5],
+        brand: 'Nike',
     },
     {
         id: 7,
@@ -53,7 +59,8 @@ export const closes = [
         title: "Nike Wildhorse 4",
         prise: 9600,
         type: "Shoes",
-        sizes: [26.5, 27, 28, 28.5]
+        sizes: [26.5, 27, 28, 28.5],
+        brand: 'Nike',
     },
     {
         id: 8,
@@ -61,7 +68,8 @@ export const closes = [
         title: "Nike Terrakiger 2",
         prise: 8600,
         type: "Shoes",
-        sizes: [26.5, 27, 28, 28.5]
+        sizes: [26.5, 27, 28, 28.5],
+        brand: 'Nike',
     },
     {
         id: 9,
@@ -69,7 +77,8 @@ export const closes = [
         title: "Adidas Adizero adios PRO",
         type: "Shoes",
         prise: 9000,
-        sizes: [26.5, 27, 28, 28.5]
+        sizes: [26.5, 27, 28, 28.5],
+        brand: 'Adidas',
     },
     {
         id: 10,
@@ -77,7 +86,8 @@ export const closes = [
         title: "Adidas Response",
         type: "Shoes",
         prise: 5600,
-        sizes: [26.5, 27, 28, 28.5]
+        sizes: [26.5, 27, 28, 28.5],
+        brand: 'Adidas',
     },
     {
         id: 11,
@@ -85,6 +95,34 @@ export const closes = [
         title: "Adidas Adizero Prime X",
         type: "Shoes",
         prise: 12600,
-        sizes: [26.5, 27, 28, 28.5]
+        sizes: [26.5, 27, 28, 28.5],
+        brand: 'Adidas',
+    },
+    {
+        id: 12,
+        art: "FFFGS86G",
+        title: "New Ballance Ultra X",
+        type: "Shoes",
+        prise: 12600,
+        sizes: [26.5, 27, 28, 28.5],
+        brand: "New Ballance",
+    },
+    {
+        id: 13,
+        art: "FFFGS86G",
+        title: "New Ballance Megarun",
+        type: "Shoes",
+        prise: 12600,
+        sizes: [26.5, 27, 28, 28.5],
+        brand: "New Ballance",
+    },
+    {
+        id: 14,
+        art: "FFFGS86G",
+        title: "New Ballance TrailFoam",
+        type: "Shoes",
+        prise: 12600,
+        sizes: [26.5, 27, 28, 28.5],
+        brand: "New Ballance",
     },
 ]

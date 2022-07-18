@@ -16,26 +16,40 @@
 
     &__image {
         width: 230px;
-        height: 200px;
+        height: 350px;
         object-fit: cover;
     }
 
-    &__art{
+    &__art {
         font-size: 16px;
         color: rgb(220, 220, 220);
+        margin-bottom: 10px;
     }
 
-    &__sizes{
-        margin-bottom: 25px;
+    &__decoration {
+        width: 100%;
         display: flex;
-        &-item{
-            cursor: pointer;
-            background: rgb(224, 224, 224);
+        justify-content: flex-start;
+        margin: 15px 0px;
+
+        &-item {
+            width: 20px;
+            height: 15px;
             margin-right: 15px;
-            padding: 10px;
-        }
-        &-item.chosed{
             background: orange;
+        }
+    }
+
+    &__sizes {
+        margin-bottom: 25px;
+        border-radius: 0px;
+        outline: 0;
+        text-align: center;
+        width: 50px;
+        padding: 5px;
+        border: 1px solid orange;
+        &-item {
+            border: 1px solid orange;
         }
     }
 }

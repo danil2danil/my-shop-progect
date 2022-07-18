@@ -11,13 +11,15 @@ function ProductArea() {
         dispatch(getData())
     }, []);
     return (
-        <section className='products'>
-            {productList.map((item) => {
-                return (
-                    <ProductCard key={item.id} product={item}/>
-                )
-            })}
-        </section>
+        <>
+            <section className='products'>
+                {productList.map((item) => {
+                    return (
+                        <ProductCard key={item.id} product={item} />
+                    )
+                })}
+            </section>
+        </>
     )
 }
 
