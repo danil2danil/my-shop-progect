@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './filter-form.scss'
 
 function Filteritem({filter, filterValue, handleClick}) {
     const [isActive, setIsActive] = useState(false)
@@ -10,7 +11,7 @@ function Filteritem({filter, filterValue, handleClick}) {
                 handleClick(filter, filterValue)
                 setIsActive(!isActive)
             }} 
-            style={{ background: isActive ? "violet" : "orange" , padding: 10 }}
+            className={isActive ? "filters__item active" : "filters__item"}
         >
             {filterValue}
         </button>)

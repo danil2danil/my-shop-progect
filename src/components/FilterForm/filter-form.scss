@@ -1,0 +1,66 @@
+@import '../../style-vars/fonts.scss';
+
+.filters {
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    padding: 30px 20px;
+    background: $main-bg;
+    box-shadow: 0px -100px 100px 30px;
+
+    &__area {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        &-text{
+            padding-right: 10px; 
+        }
+    }
+
+    &__item {
+        @extend %default-font;
+        font-size: 14px;
+        background: $filter-item-bg;
+        padding: 7px 15px;
+        margin-right: 20px;
+        text-transform: uppercase;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &__item.active {
+        background: $filter-item-active;
+        padding-right: 20px;
+    }
+
+    &__item.active::after {
+        position: relative;
+        left: 10px;
+        content: 'X';
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__submit-btn {
+        @extend %default-font;
+        font-size: 16px;
+        padding: 10px 15px;
+        background: $filter-submit-btn;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+    }
+
+    &__show-btn{
+        @extend %default-font;
+        padding: 10px 12px;
+        background: white;
+        border-radius: 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+}

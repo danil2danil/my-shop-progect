@@ -26,12 +26,19 @@
         margin-bottom: 10px;
     }
 
+    &__specialization{
+        display: flex;
+        color: rgb(39, 39, 39);
+        &-item{
+            margin-right: 10px;
+        }
+    }
+
     &__decoration {
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        margin: 15px 0px;
-
+        margin: 10px 0px;
         &-item {
             width: 20px;
             height: 15px;

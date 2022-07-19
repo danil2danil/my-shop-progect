@@ -7,6 +7,8 @@ export const closes = [
         sizes: [26.5, 27, 28, 28.5],
         type: "Shoes",
         brand: 'Nike',
+        specialization:  ["Шоссе"],
+        waterproof: "Нет",
     },
     {
         id: 2,
@@ -16,6 +18,8 @@ export const closes = [
         sizes: [26.5, 27, 28, 28.5],
         type: "Shoes",
         brand: 'Nike',
+        specialization:  ["Шоссе", "Стадион", "Бездорожье"],
+        waterproof: "Нет",
     },
     {
         id: 3,
@@ -24,7 +28,9 @@ export const closes = [
         prise: 10000,
         type: "Shoes",
         sizes: [26.5, 27, 28, 28.5],
-        brand: 'Nike'
+        brand: 'Nike',
+        specialization:  ["Шоссе", "Стадион"],
+        waterproof: "Нет",
     },
     {
         id: 4,
@@ -34,6 +40,8 @@ export const closes = [
         type: "Shoes",
         sizes: [26.5, 27, 28, 28.5],
         brand: 'Nike',
+        specialization:  ["Шоссе", "Стадион"],
+        waterproof: "Нет",
     },
     {
         id: 5,
@@ -43,6 +51,8 @@ export const closes = [
         type: "Shoes",
         sizes: [26.5, 26],
         brand: 'Nike',
+        specialization:  ["Шоссе", "Стадион"],
+        waterproof: "Нет",
     },
     {
         id: 6,
@@ -52,6 +62,8 @@ export const closes = [
         type: "Shoes",
         sizes: [26.5, 27, 28, 28.5],
         brand: 'Nike',
+        specialization:  ["Шоссе", "Стадион"],
+        waterproof: "Нет",
     },
     {
         id: 7,
@@ -61,6 +73,9 @@ export const closes = [
         type: "Shoes",
         sizes: [26.5, 27, 28, 28.5],
         brand: 'Nike',
+        specialization: ["Бездорожье"],
+        waterproof: "Да",
+
     },
     {
         id: 8,
@@ -70,6 +85,8 @@ export const closes = [
         type: "Shoes",
         sizes: [26.5, 27, 28, 28.5],
         brand: 'Nike',
+        specialization: ["Бездорожье"],
+        waterproof: "Да",
     },
     {
         id: 9,
@@ -79,15 +96,19 @@ export const closes = [
         prise: 9000,
         sizes: [26.5, 27, 28, 28.5],
         brand: 'Adidas',
+        specialization:  ["Шоссе", "Стадион"],
+        waterproof: "Нет",
     },
     {
         id: 10,
         art: "FFFGS86G",
-        title: "Adidas Response",
+        title: "Adidas Terex Boost",
         type: "Shoes",
         prise: 5600,
         sizes: [26.5, 27, 28, 28.5],
         brand: 'Adidas',
+        specialization:  ["Бездорожье"],
+        waterproof: "Да",
     },
     {
         id: 11,
@@ -97,6 +118,8 @@ export const closes = [
         prise: 12600,
         sizes: [26.5, 27, 28, 28.5],
         brand: 'Adidas',
+        specialization:  ["Шоссе"],
+        waterproof: "Нет",
     },
     {
         id: 12,
@@ -106,6 +129,8 @@ export const closes = [
         prise: 12600,
         sizes: [26.5, 27, 28, 28.5],
         brand: "New Ballance",
+        specialization:  ["Шоссе", "Стадион", "Бездорожье"],
+        waterproof: "Да",
     },
     {
         id: 13,
@@ -115,6 +140,8 @@ export const closes = [
         prise: 12600,
         sizes: [26.5, 27, 28, 28.5],
         brand: "New Ballance",
+        specialization:  ["Шоссе", "Стадион"],
+        waterproof: "Нет",
     },
     {
         id: 14,
@@ -124,5 +151,7 @@ export const closes = [
         prise: 12600,
         sizes: [26.5, 27, 28, 28.5],
         brand: "New Ballance",
+        specialization:  ["Бездорожье"],
+        waterproof: "Да",
     },
 ]

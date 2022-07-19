@@ -7,6 +7,7 @@ const initialState = {
     products: [],
     cart: [],
     filters: [],
+    searchValue: [""]
 }
 
 
@@ -25,33 +26,37 @@ const productSlise = createSlice({
             let temp = getAll()
             let filteredProducts = []
             state.filters = state.filters.concat(action.payload)
-            state.filters.forEach(element => {
-                if ("brand" in element) {
-                    filteredProducts = filteredProducts.concat(temp.filter(item => item.brand === element.brand))
-                }
-            });
-            if (filteredProducts.length !== 0) {
-                state.products = filteredProducts;
+            if (state.filters.some(el => "brand" in el)) {
+                state.filters.forEach(element => {
+                    if ("brand" in element) {
+                        filteredProducts = filteredProducts.concat(temp.filter(item => item.brand === element.brand))
+                    }
+                });
             }
-            else {
-                state.products = temp;
+            else filteredProducts = temp
+            if (state.filters.some(el => "specialization" in el)) {
+                state.filters.forEach(element => {
+                    if ("specialization" in element) {
+                        filteredProducts = filteredProducts.filter((item => item.specialization.includes(element.specialization)))
+                    }
+                });
             }
-            filteredProducts = []
+            if (state.filters.some(el => "waterproof" in el)) {
+                state.filters.forEach(element => {
+                    if ("waterproof" in element) {
+                        filteredProducts = filteredProducts.filter((item => item.waterproof===element.waterproof))
+                    }
+                });
+            }
+            state.products = filteredProducts;
             state.filters = []
         },
-        filterItems: (state, action) => {
-
-        },
-        filterItemsType: (state, action) => {
-
-        },
-        filterItemsSize: (state, action) => {
-
-        },
-
+        handleChangeSearch: (state, action) => {
+            state.searchValue = action.payload
+        }
     }
 })
 
 
-export const { getData, addItemImCart, filterItems, aplyFilters } = productSlise.actions
+export const { getData, addItemImCart, aplyFilters, handleChangeSearch } = productSlise.actions
 export default productSlise.reducer

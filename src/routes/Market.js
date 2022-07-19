@@ -5,7 +5,7 @@ import FilterForm from '../components/FilterForm/FilterForm'
 function Market() {
   return (
     <div>
-      <FilterForm/>
+      <FilterForm />
       <ProductArea />
     </div>
   )
