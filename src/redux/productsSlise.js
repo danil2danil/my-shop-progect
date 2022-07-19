@@ -7,10 +7,9 @@ const initialState = {
     products: [],
     cart: [],
     filters: [],
-    searchValue: [""]
 }
 
-
+let temp = getAll()
 
 const productSlise = createSlice({
     name: "products",
@@ -23,9 +22,8 @@ const productSlise = createSlice({
             state.cart.push(action.payload)
         },
         aplyFilters: (state, action) => {
-            let temp = getAll()
             let filteredProducts = []
-            state.filters = state.filters.concat(action.payload)
+            state.filters = action.payload
             if (state.filters.some(el => "brand" in el)) {
                 state.filters.forEach(element => {
                     if ("brand" in element) {
@@ -51,12 +49,15 @@ const productSlise = createSlice({
             state.products = filteredProducts;
             state.filters = []
         },
-        handleChangeSearch: (state, action) => {
-            state.searchValue = action.payload
+        
+        findProduct: (state, action) => {
+            state.products = temp.filter(item=>{
+                return (item.title.toLowerCase().includes(action.payload.toLowerCase()))
+            })
         }
     }
 })
 
 
-export const { getData, addItemImCart, aplyFilters, handleChangeSearch } = productSlise.actions
+export const { getData, addItemImCart, aplyFilters, handleChangeSearch, findProduct } = productSlise.actions
 export default productSlise.reducer

@@ -1,21 +1,23 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { handleChangeSearch } from '../../redux/productsSlise'
+import { findProduct } from '../../redux/productsSlise'
+import { useState } from 'react'
 
 function SearchInput() {
-    const dispatch = useDispatch()
-    const handleChange = (event)=>{
-        dispatch(handleChangeSearch(event.target.value))
-    }
-    
+  const [inputValue, setInputValue] = useState("")
+  const dispatch = useDispatch()
+  const handleChange = (event)=>{
+    setInputValue(event.target.value)
+  }
+  const search = () => dispatch(findProduct(inputValue))
   return (
     <>
-        <input 
-            value={useSelector((state)=>state.products.searchValue)} 
-            onChange={handleChange}
-            placeholder="Ищите что-то конкретное?"
-        />
-        <button style={{background: "violet"}}>Найти</button>
+      <input
+        value={inputValue}
+        onChange={handleChange}
+        placeholder="Ищите что-то конкретное?"
+      />
+      <button style={{ background: "violet" }} onClick={()=>search()}>Найти</button>
     </>
   )
 }
