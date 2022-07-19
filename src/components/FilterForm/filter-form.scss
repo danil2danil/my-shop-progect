@@ -5,9 +5,13 @@
     left: 0px;
     top: 0px;
     width: 100%;
-    padding: 30px 20px;
-    background: $main-bg;
-    box-shadow: 0px -100px 100px 30px;
+    background: $nav-bg;
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
 
     &__area {
         display: flex;
@@ -62,5 +66,9 @@
         cursor: pointer;
         display: flex;
         align-items: center;
+        margin-right: 20px;
+    }
+    &__show-btn.active{
+        background: $filter-item-active;
     }
 }

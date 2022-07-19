@@ -1,8 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { getAll } from '../data/dataServis';
 
-
-
 const initialState = {
     products: [],
     cart: [],

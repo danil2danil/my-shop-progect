@@ -1,12 +1,11 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addItemImCart } from '../../redux/productsSlise'
 import './card-btn.scss'
 
 function CardBtn({ sizeValue, product }) {
-    const [isProductInCart, setIsProductInCart] = useState(false)
     const dispatch = useDispatch();
-    const cart = useSelector((state)=>state.products.cart)
+    const cart = useSelector((state) => state.products.cart)
 
     const handleClick = () => {
         if (sizeValue !== "") {
@@ -17,12 +16,16 @@ function CardBtn({ sizeValue, product }) {
         }
     }
 
+    const isProductInCart = () => cart.some(item=> item.product == product && item.sizeValue == sizeValue)
+
+
     return (
         <button
-            className="primary"
+            className={ isProductInCart() ? "btn disabled" : "btn" }
             onClick={handleClick}
+            disabled = {isProductInCart()}
         >
-            Добавить в корзину
+            {isProductInCart() ? "В корзине" : "Добавить в корзину" }
         </button>
     )
 }

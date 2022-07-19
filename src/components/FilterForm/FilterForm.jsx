@@ -5,6 +5,7 @@ import { aplyFilters } from '../../redux/productsSlise'
 import { MdOutlineArrowDropDownCircle } from 'react-icons/md'
 import Filteritem from './Filteritem'
 import SearchInput from '../SearchInput/SearchInput'
+import PopupCart from '../PopupCart/PopupCart'
 
 function FilterForm() {
     const [filters, setFilters] = useState({ brand: ["Adidas", "Nike", "New Ballance", "Soucony"], specialization: ["Бездорожье", "Стадион", "Шоссе"], waterproof: ["Да"] })
@@ -21,17 +22,18 @@ function FilterForm() {
     }
     return (
         <section className='filters'>
+            <PopupCart />
             <div className="filters__inner">
                 <button
                     onClick={() => setIsFiltersVisible(!isFiltersVisible)}
-                    className='filters__show-btn'
+                    className={ chosedFilters.length > 0 ? 'filters__show-btn active' : 'filters__show-btn'}
                 >
                     <MdOutlineArrowDropDownCircle style={{ width: 22, height: 22 }} />
                     Фильтры: {chosedFilters.length}
                 </button>
                 <SearchInput />  
             </div>
-            <div style={{ display: isFiltersVisible ? "block" : "none", paddingTop: 15 }}>
+            <div style={{ display: isFiltersVisible ? "block" : "none", padding: 30, background: "rgb(240, 240, 240)"}}>
                 <div className="filters__area">
                     <p className='filters__area-text'>Бренд:</p>
                     {filters.brand.map((item) => {

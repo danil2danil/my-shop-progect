@@ -1,4 +1,4 @@
-.primary{
+.btn{
     padding: 10px 15px;
     background: rgb(168, 76, 253);
     cursor: pointer;
@@ -10,4 +10,9 @@
     &:hover {
         background: rgb(185, 111, 255);
     }
+}
+
+.btn.disabled{
+    background: rgb(40, 18, 59);
+    cursor: unset;
 }

@@ -1,0 +1,71 @@
+@import '../../style-vars/fonts.scss';
+
+.popup {
+    background: white;
+    width: 450px;
+    position: absolute;
+    top: 105px;
+    right: 0px;
+    padding: 10px 20px;
+    background: $nav-bg;
+    color: white;
+    border-radius: 10px;
+    &__title {
+        text-align: center;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgba(238, 238, 238, 0.123);
+        padding: 5px 0px;
+        &-title{
+            flex-basis: 120px;
+            font-size: 16px;
+        }
+        &-size{
+            flex-basis: 50px;
+            text-align: center;
+        }
+        &-prise{
+            flex-basis: 70px;
+            text-align: right;
+            font-size: 18px;
+        }
+        &-img{
+            width: 70px;
+            height: 50px;
+            object-fit: cover;
+        }
+    }
+
+    &__names {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        &-item{
+            margin-left: 70px;
+        }
+    }
+
+    &__total{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0px;
+        &-prise{
+            color: rgb(0, 192, 0);
+        }
+    }
+}
