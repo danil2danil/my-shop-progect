@@ -18,7 +18,7 @@ function ProductCard({ product }) {
             <p className='card__art'>АРТ: {art}</p>
             <div className='card__specialization'>
                 {specialization.map((item) => {
-                    return (<div className='card__specialization-item'>{item}</div>)
+                    return (<div key={item} className='card__specialization-item'>{item}</div>)
                 })}
                 {waterproof==="Да" ? "Влагостойкие" : ""}
             </div>
@@ -32,7 +32,7 @@ function ProductCard({ product }) {
             </div>
             <p className='card__sizes-list'>
             Размеры в наличии: {sizes.map((item) => {
-                    return (<span className='card__sizes-list-item'>{item}cм </span>)
+                    return (<span key={item} className='card__sizes-list-item'>{item}cм </span>)
                 })}
             </p>
             <h2 className="card__prise">{prise}p.</h2>

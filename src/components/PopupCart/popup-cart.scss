@@ -3,13 +3,55 @@
 .popup {
     background: white;
     width: 450px;
-    position: absolute;
+    position: fixed;
     top: 105px;
-    right: 0px;
+    right: 10px;
     padding: 10px 20px;
     background: $nav-bg;
     color: white;
     border-radius: 10px;
+    z-index: 10;
+    transition: 0.5s all;
+    transform: translateX(800px);
+
+    &__btn-wrapper {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        color: white;
+        z-index: 10;
+    }
+
+    &__btn {
+        width: 45px;
+        height: 45px;
+        position: relative;
+
+        &-index {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            height: 30px;
+            padding-left: 9px;
+            border-radius: 50%;
+            line-height: 30px;
+            background: red;
+        }
+    }
+
+    &__submit {
+        @extend %default-font;
+        padding: 10px 20px;
+        width: 100%;
+        background: $filter-item-active;
+        text-transform: uppercase;
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+
     &__title {
         text-align: center;
         font-size: 18px;
@@ -26,20 +68,24 @@
         display: flex;
         border-bottom: 1px solid rgba(238, 238, 238, 0.123);
         padding: 5px 0px;
-        &-title{
+
+        &-title {
             flex-basis: 120px;
             font-size: 16px;
         }
-        &-size{
+
+        &-size {
             flex-basis: 50px;
             text-align: center;
         }
-        &-prise{
+
+        &-prise {
             flex-basis: 70px;
             text-align: right;
             font-size: 18px;
         }
-        &-img{
+
+        &-img {
             width: 70px;
             height: 50px;
             object-fit: cover;
@@ -53,19 +99,26 @@
         text-transform: uppercase;
         font-size: 12px;
         font-weight: 600;
-        margin-bottom: 5px;
-        &-item{
-            margin-left: 70px;
+        margin-bottom: 15px;
+
+        &-item {
+            margin: 0px 42px 0px 20px;
         }
     }
 
-    &__total{
+    &__total {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 20px 0px;
-        &-prise{
+
+        &-prise {
             color: rgb(0, 192, 0);
         }
     }
+}
+
+.popup.active {
+    transition: 0.5s all;
+    transform: translateX(0px);
 }

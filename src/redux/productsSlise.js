@@ -19,6 +19,10 @@ const productSlise = createSlice({
         addItemImCart: (state, action) => {
             state.cart.push(action.payload)
         },
+        deleteItemInCart: (state, action)=>{
+            state.cart.forEach(item => console.log())
+            state.cart = state.cart.filter(item => !(item.product.id === action.payload.id && item.sizeValue === action.payload.size))
+        },
         aplyFilters: (state, action) => {
             let filteredProducts = []
             state.filters = action.payload
@@ -57,5 +61,5 @@ const productSlise = createSlice({
 })
 
 
-export const { getData, addItemImCart, aplyFilters, handleChangeSearch, findProduct } = productSlise.actions
+export const { getData, addItemImCart, deleteItemInCart, aplyFilters, handleChangeSearch, findProduct } = productSlise.actions
 export default productSlise.reducer

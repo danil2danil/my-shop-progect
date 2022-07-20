@@ -8,7 +8,7 @@ function ProductSizes({handleChangeSize, sizes, style }) {
             <option className={`${style.style}__item`} value=""></option>
             {sizes.map((item) => {
                 return (
-                    <option className={`${style.style}__item`} value={item}>{item}</option>
+                    <option key={item} className={`${style.style}__item`} value={item}>{item}</option>
                 )
             })}
         </select>

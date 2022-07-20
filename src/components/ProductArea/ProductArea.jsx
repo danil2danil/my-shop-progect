@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getData } from '../../redux/productsSlise';
 import ProductCard from '../ProductCard/ProductCard';
 import './product-area.scss'
+import PopupCart from '../PopupCart/PopupCart'
+
 
 function ProductArea() {
     const productList = useSelector((state) => state.products.products)
@@ -13,6 +15,7 @@ function ProductArea() {
     return (
         <>
             <section className='products'>
+                <PopupCart/>
                 {productList.map((item) => {
                     return (
                         <ProductCard key={item.id} product={item} />
