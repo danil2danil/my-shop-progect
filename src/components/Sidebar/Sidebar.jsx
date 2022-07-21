@@ -24,7 +24,7 @@ function Sidebar() {
                 </NavLink>
                 <NavLink className="sidebar__nav-link" to="/cart">
                     <FiShoppingCart className='sidebar__nav-ico' />
-                    <p className="sidebar__nav-title">Корзина</p>
+                    <p className="sidebar__nav-title">Оформить заказ</p>
                 </NavLink>
                 <NavLink className="sidebar__nav-link" to="/market">
                     <BsShop className='sidebar__nav-ico' />

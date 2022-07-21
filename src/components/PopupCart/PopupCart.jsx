@@ -36,7 +36,7 @@ function PopupCart() {
                         <img className='popup__item-img' src="" alt="cart-img" />
                         <h4 className="popup__item-title">{item.product.title}</h4>
                         <p className='popup__item-size'>{item.sizeValue}</p>
-                        <h3 className="popup__item-prise">{item.product.prise}</h3>
+                        <h3 className="popup__item-prise">{item.product.prise}р</h3>
                         <BsTrash style={{ width: 22, height: 22, cursor: "pointer" }} onClick={() => handleClick(item.product.id, item.sizeValue)} />
                     </div>
                 )
@@ -44,7 +44,7 @@ function PopupCart() {
             {totalPrise() === 0 ? "В корзине нет товаров" : ""}
             <div className="popup__total">
                 <h2 className="popup__total-title">Итого: </h2>
-                <h3 className="popup__total-prise">{totalPrise()}</h3>
+                <h3 className="popup__total-prise">{totalPrise()}р</h3>
             </div>
             <Link to='/cart'><button className='popup__submit'>Оформить заказ</button></Link>
         </div>

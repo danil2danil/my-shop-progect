@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useState } from 'react'
+import { useDispatch} from 'react-redux'
 import { aplyFilters } from '../../redux/productsSlise'
 import { MdOutlineArrowDropDownCircle } from 'react-icons/md'
 import Filteritem from './Filteritem'
@@ -12,7 +12,6 @@ function FilterForm() {
     const [filters, setFilters] = useState({ brand: ["Adidas", "Nike", "New Ballance", "Soucony"], specialization: ["Бездорожье", "Стадион", "Шоссе"], waterproof: ["Да"] })
     const [isFiltersVisible, setIsFiltersVisible] = useState(false)
     const dispatch = useDispatch()
-
     const [chosedFilters, setChosedFilters] = useState([])
     const handleClick = (filter, filterValue) => {
         if (chosedFilters.some(item => item[filter] === filterValue)) {

@@ -6,7 +6,9 @@
     top: 0px;
     width: 100%;
     background: $nav-bg;
+    padding-right: 110px;
     &__inner{
+        max-width: 700px;
         display: flex;
         align-items: center;
         padding: 30px;
