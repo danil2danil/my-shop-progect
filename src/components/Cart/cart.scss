@@ -57,6 +57,17 @@
         }
     }
 
+    &__alert{
+        align-self: center;
+        margin-top: auto;
+        text-align: center;
+        &-link{
+            font-size: 18px;
+            color: $filter-submit-btn;
+            text-decoration: underline;
+        }
+    }
+
     &__items {
         flex-basis: 50%;
         padding: 45px 30px;
@@ -102,6 +113,7 @@
         text-transform: uppercase;
         font-weight: 700;
         width: 400px;
+        cursor: pointer;
         @extend %default-font
     }
 

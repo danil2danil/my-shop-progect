@@ -29,14 +29,14 @@ function Cart() {
                     <input className='cart__form-input cart__form-input--postindex' type="text" placeholder='Почтовый индекс' />
                     <label className='cart__form-checkbox' htmlFor="sdec"><input type="checkbox" id='sdec' />СДЕК</label>
                     <label className='cart__form-checkbox' htmlFor="post-russia"><input type="checkbox" id='post-russia' />Почта России</label>
-                    <button className='cart__pay-btn'>Оплатить</button>
+                    <Link to="/payment"><button className='cart__pay-btn'>Оплатить</button></Link>
                 </div>
                 <div className="cart__items">
                     <h2 className="cart__subtitle">Выбранные товары</h2>
                     {cartItems.length === 0 ?
-                        <div className="cart-alert">
+                        <div className="cart__alert">
                             <p>Корзина пуста</p>
-                            <Link to='/market'>Перейти к покупкам</Link>
+                            <Link to='/market' className='cart__alert-link'>Перейти к покупкам</Link>
                         </div>
                         : 
                         ""
