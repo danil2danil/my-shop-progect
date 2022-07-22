@@ -8,8 +8,8 @@ const popupSlise = createSlice({
     name: "poupCart",
     initialState,
     reducers: {
-        toogleCartPopup: (state)=>{
-            state.isPopupActive = !state.isPopupActive
+        toogleCartPopup: (state, action)=>{
+            state.isPopupActive = action.payload
         },
     }
 })

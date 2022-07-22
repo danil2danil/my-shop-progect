@@ -3,9 +3,10 @@ import CardBtn from '../AddInCartBtn/CardBtn'
 import './product-card.scss'
 import { useState } from 'react'
 import ProductSizes from './ProductSizes'
+import Slider from '../Slider/Slider'
 
 function ProductCard({ product }) {
-    const { title, prise, sizes, art, specialization, waterproof } = product
+    const { title, prise, sizes, art, specialization, waterproof, images } = product
     const [sizeValue, setSizeValue] = useState('')
     const handleChangeSize = (event) => {
         setSizeValue(event.target.value)
@@ -13,7 +14,7 @@ function ProductCard({ product }) {
 
     return (
         <div className="card">
-            <img className='card__image' src="" alt="card-img" />
+            <Slider width={450} images={images} buttons={true}/>
             <h3 className="card__title">{title}</h3>
             <p className='card__art'>АРТ: {art}</p>
             <div className='card__specialization'>

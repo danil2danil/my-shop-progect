@@ -1,0 +1,48 @@
+@import '../../style-vars/fonts.scss';
+
+.main {
+    min-height: 100vh;
+    background: url("../../../public/images/mainslider/8.jpg")no-repeat center;
+    background-size: cover;
+
+    &-blur{
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.521);
+    }
+
+    &__logo-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
+
+    &__logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    &__logo-inner {
+        color: white;
+        margin-left: 15px;
+    }
+
+    &__logo-title {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    &__btn {
+        padding: 15px 30px;
+        @extend %default-font;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 auto;
+        display: block;
+        background: $filter-submit-btn;
+        color: white;
+        cursor: pointer;
+        margin-top: 300px;
+    }
+}

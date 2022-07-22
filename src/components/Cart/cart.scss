@@ -81,13 +81,15 @@
         margin: 0 auto;
         align-items: center;
         justify-content: space-between;
-        background: rgb(241, 241, 241);
-        padding: 15px 20px;
+        border-bottom: 1px solid rgb(209, 209, 209);
+        padding: 10px 15px;
         margin-bottom: 10px;
 
         &-img {
-            width: 100px;
-            height: 60px;
+            width: 160px;
+            height: 90px;
+            object-fit: cover;
+            transform: rotate(6deg);
         }
 
         &-title {

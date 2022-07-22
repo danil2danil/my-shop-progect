@@ -8,6 +8,10 @@
     flex-direction: column;
     min-height: 400px;
 
+    &__siler{
+        margin-bottom: 20px;
+    }
+
     &__inner {
         height: 100%;
         display: flex;
@@ -17,6 +21,7 @@
     &__title{
         font-size: 26px;
         font-weight: 600;
+        margin-top: 20px;
     }
 
     &__image {

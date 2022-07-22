@@ -9,12 +9,12 @@ import { toogleCartPopup } from '../../redux/popupSlise'
 function PopupCartBtn() {
   const dispatch = useDispatch()
   const counter = useSelector(state => state.products.cart)
-  const showPopup = () => {
-    dispatch(toogleCartPopup())
-  }
+  
   const isPopupActive = useSelector(state => state.popup.isPopupActive)
 
-
+  const showPopup = () => {
+    dispatch(toogleCartPopup(!isPopupActive))
+  }
   return (
     <div className='popup__btn-wrapper' onClick={showPopup}>
       <div className={isPopupActive ? 'popup__btn-inner active' : 'popup__btn-inner'}>

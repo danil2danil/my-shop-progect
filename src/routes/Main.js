@@ -1,11 +1,9 @@
 import React from 'react'
-import Slider from '../components/Slider/Slider'
+import MainPage from '../components/MainPage/MainPage'
 
 function Main() {
   return (
-    <div>
-      <Slider/>
-    </div>
+    <MainPage />
   )
 }
 

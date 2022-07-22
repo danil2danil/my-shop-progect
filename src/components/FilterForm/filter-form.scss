@@ -2,12 +2,13 @@
 
 .filters {
     position: sticky;
+    z-index: 10;
     left: 0px;
     top: 0px;
     width: 100%;
     background: $nav-bg;
-    padding-right: 110px;
-    &__inner{
+
+    &__inner {
         max-width: 700px;
         display: flex;
         align-items: center;
@@ -18,8 +19,9 @@
         display: flex;
         align-items: center;
         margin-bottom: 15px;
-        &-text{
-            padding-right: 10px; 
+
+        &-text {
+            padding-right: 10px;
         }
     }
 
@@ -55,9 +57,10 @@
         text-transform: uppercase;
         color: white;
         cursor: pointer;
+        margin-bottom: 10px
     }
 
-    &__show-btn{
+    &__show-btn {
         @extend %default-font;
         padding: 10px 12px;
         background: white;
@@ -69,7 +72,8 @@
         align-items: center;
         margin-right: 20px;
     }
-    &__show-btn.active{
+
+    &__show-btn.active {
         background: $filter-item-active;
     }
 }

@@ -1,5 +1,6 @@
 import { closes } from "./data";
 
-export const getAll = ()=>{
+export const getAll = () => {
+    
     return closes;
 }

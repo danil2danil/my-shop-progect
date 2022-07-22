@@ -33,7 +33,7 @@ function PopupCart() {
             {cart.map(item => {
                 return (
                     <div key={item.product.id} className="popup__item">
-                        <img className='popup__item-img' src="" alt="cart-img" />
+                        <img className='popup__item-img' src={item.product.images[0]} alt="cart-img" />
                         <h4 className="popup__item-title">{item.product.title}</h4>
                         <p className='popup__item-size'>{item.sizeValue}</p>
                         <h3 className="popup__item-prise">{item.product.prise}р</h3>
