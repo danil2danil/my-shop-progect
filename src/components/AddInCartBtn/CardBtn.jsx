@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addItemImCart } from '../../redux/productsSlise'
 import './card-btn.scss'
@@ -16,7 +16,7 @@ function CardBtn({ sizeValue, product }) {
         }
     }
 
-    const isProductInCart = () => cart.some(item=> item.product == product && item.sizeValue == sizeValue)
+    const isProductInCart = () => cart.some(item=> item.product === product && item.sizeValue === sizeValue)
 
 
     return (

@@ -15,7 +15,7 @@ function ProductArea() {
         dispatch(getData())
         setTimeout(() => {
             dispatch(toogleCartPopup(!popupActive))
-        }, 1000);
+        }, 2000);
     }, []);
     return (
         <>

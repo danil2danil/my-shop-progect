@@ -3,7 +3,7 @@
 .sidebar {
     @extend %sidebar-font;
     width: 311px;
-    height: 100%;
+    min-height: 100%;
     padding: 40px 0px;
     display: flex;
     flex-direction: column;
@@ -13,14 +13,15 @@
     top: 0px;
     left: 0px;
 
-    &.mini{
+    &.mini {
         width: 88px;
         display: flex;
         flex-direction: column;
+        min-height: 110%;
     }
 
-    &__header{
-        margin: 0px 24px;
+    &__header {
+        padding-left: 23px;
     }
 
     &__menu-btn {
@@ -46,7 +47,7 @@
         color: white;
     }
 
-    &__nav{
+    &__nav {
         margin: 30px 16px;
     }
 
@@ -66,17 +67,39 @@
         flex-basis: 100%;
         border-radius: 8px;
         color: $nav-text-color;
-        cursor: pointer ;
+        cursor: pointer;
         padding: 16px;
-        &:hover{
+
+        &:hover {
             background: $hover-block;
             color: $hover-text;
         }
     }
 
-    &__nav-link.active{
+    &__nav-link.active {
         background: $hover-block;
         color: $hover-text;
-    } 
-}
+    }
 
+
+    @media(max-width: 600px) {
+        &.mini {
+            width: 70px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__header {
+            padding-left: 15px;
+        }
+
+        &__nav {
+            margin: 30px 12px;
+        }
+
+        &__nav-link {
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+    }
+}

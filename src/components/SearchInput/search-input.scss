@@ -1,6 +1,7 @@
 .search {
     display: flex;
     align-items: center;
+
     &__input {
         width: 350px;
         padding: 10px;
@@ -11,6 +12,12 @@
             background: transparent;
             margin: 0px 10px;
             cursor: pointer;
+        }
+    }
+
+    @media (max-width: 800px) {
+        &__input {
+            width: 250px;
         }
     }
 }

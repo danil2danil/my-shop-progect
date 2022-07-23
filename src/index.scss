@@ -48,3 +48,9 @@ li{
 body{
   @extend %default-font;
 }
+
+@media(max-width: 600px){
+  .app-content{
+    margin-left: 68px;
+  }
+}

@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
-import { useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { aplyFilters } from '../../redux/productsSlise'
 import { MdOutlineArrowDropDownCircle } from 'react-icons/md'
 import Filteritem from './Filteritem'
 import SearchInput from '../SearchInput/SearchInput'
 import PopupCartBtn from '../PopupCart/PopupCartBtn'
-import { getData } from '../../redux/productsSlise'
+import { useMediaQuery } from 'react-responsive'
+
 
 
 function FilterForm() {
@@ -14,6 +15,7 @@ function FilterForm() {
     const [isFiltersVisible, setIsFiltersVisible] = useState(false)
     const dispatch = useDispatch()
     const [chosedFilters, setChosedFilters] = useState([])
+    const isMedia650 = useMediaQuery({ minWidth: 650 })
 
     const activateFilter = (filter, filterValue) => {
         if (chosedFilters.some(item => item[filter] === filterValue)) {
@@ -34,28 +36,28 @@ function FilterForm() {
                     <MdOutlineArrowDropDownCircle style={{ width: 22, height: 22 }} />
                     Фильтры: {chosedFilters.length}
                 </button>
-                <SearchInput />
+                {isMedia650 && <SearchInput />}
                 <PopupCartBtn />
             </div>
-            <div style={{ display: isFiltersVisible ? "block" : "none", padding: 30, background: "rgb(240, 240, 240)"}}>
+            <div style={{ display: isFiltersVisible ? "block" : "none", padding: "15px 20px", background: "rgb(240, 240, 240)" }}>
+                <p className='filters__area-text'>Бренд:</p>
                 <div className="filters__area">
-                    <p className='filters__area-text'>Бренд:</p>
                     {filters.brand.map((item) => {
                         return (
                             <Filteritem key={item} filter={"brand"} filterValue={item} handleClick={activateFilter} />
                         )
                     })}
                 </div>
+                <p className='filters__area-text'>Cпециализаця:</p>
                 <div className="filters__area">
-                    <p className='filters__area-text'>Cпециализаця:</p>
                     {filters.specialization.map((item) => {
                         return (
                             <Filteritem key={item} filter={"specialization"} filterValue={item} handleClick={activateFilter} />
                         )
                     })}
                 </div>
+                <p className='filters__area-text'>Наличие водоотталкивающего слоя:</p>
                 <div className="filters__area">
-                    <p className='filters__area-text'>Наличие водоотталкивающего слоя:</p>
                     {filters.waterproof.map((item) => {
                         return (
                             <Filteritem key={item} filter={"waterproof"} filterValue={item} handleClick={activateFilter} />

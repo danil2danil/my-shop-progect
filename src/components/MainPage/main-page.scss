@@ -5,7 +5,7 @@
     background: url("../../../public/images/mainslider/8.jpg")no-repeat center;
     background-size: cover;
 
-    &-blur{
+    &-blur {
         height: 100vh;
         background: rgba(0, 0, 0, 0.521);
     }
@@ -44,5 +44,38 @@
         color: white;
         cursor: pointer;
         margin-top: 300px;
+    }
+
+    @media (max-width: 500px) {
+        &__logo-title {
+            font-size: 40px;
+        }
+
+        &__logo-wrapper {
+            padding: 15px;
+        }
+
+        &__logo-subtitle {
+            font-size: 14px;
+        }
+
+        &__btn {
+            padding: 15px 20px;
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 400px) {
+        &__logo-title {
+            font-size: 36px;
+        }
+
+        &__logo-subtitle {
+            font-size: 12px;
+        }
+
+        &__btn {
+            padding: 15px;
+            font-size: 18px;
+        }
     }
 }

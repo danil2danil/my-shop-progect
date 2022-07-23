@@ -1,6 +1,5 @@
 import './slider.scss'
 import { useState, useEffect } from 'react'
-import sliderItems from './sliderData'
 import { BsArrowRightSquare, BsArrowLeftSquare } from 'react-icons/bs'
 
 
@@ -62,7 +61,7 @@ function Slider({ isAnimationActive, images, width, height, animate, buttons }) 
         <div className="slider">
             <BsArrowLeftSquare style={buttons ? { display: 'block' } : { display: 'none' }} className="slider__nav-btn slider__nav-btn--prew" onClick={swipePrew}>prew</BsArrowLeftSquare>
             <div className="slider__window" style={{ width: `${sliderWidth}px` }}>
-                <div className="slider__track" style={{ height: `${sliderHeight}px`, transform: `translateX(${offset}px)` }}>
+                <div className="slider__track" style={{ transform: `translateX(${offset}px)` }}>
                     {items}
                 </div>
             </div>
